@@ -58,9 +58,9 @@ After understanding the needs of nutritionists, the team decided to continue to 
         Adjust demands                          	:done,p1, 07-31,08-08
         
         section Web Development 
-        Front-end design                        	:active,d0,08-08,08-21
-        prototype                                   :active,d1,08-13,08-21
-        Back-end design(UML)						:d2,after d1,09-04
+        Front-end design                        	:done,d0,08-08,08-21
+        prototype                                   :done,d1,08-13,08-21
+        Back-end design(UML)						:done,d2,after d1,09-04
         Basic function								:d3,after d2,09-18
         Buffer Week									:d4,after d3,09-25
         Business logic development					:d5,after d4,14d
