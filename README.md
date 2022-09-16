@@ -67,13 +67,13 @@ After understanding the needs of nutritionists, the team decided to continue to 
         Front-end and back-end docking & optimization :d6,after d5,7d
         
         section Database Development 
-        Database Development_01						:active,dd0,08-08,09-18
+        Database Development_01						:done,dd0,08-08,09-18
         Buffer Week									:d4,after d3,09-25
         Database Development_02						:active,dd1,after d4,10-23
         
         section Data Collection
-        Form creation								:active,c0,08-15,7d
-        Form adjustment								:c1,after c0,7d
+        Form creation								:done,c0,08-15,7d
+        Form adjustment								:done,c1,after c0,7d
         Data collection								:c2,after c1,10-28
         Data Cleaning								:c3,09-19,14d
         
