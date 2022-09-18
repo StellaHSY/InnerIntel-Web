@@ -22,6 +22,7 @@
         <link href="assets/plugins/datatables/css/jquery.datatables.min.css" rel="stylesheet" type="text/css"/>	
         <link href="assets/plugins/datatables/css/jquery.datatables_themeroller.css" rel="stylesheet" type="text/css"/>	
         <link href="assets/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/detail.css" rel="stylesheet" type="text/css"/>
       
         <!-- Theme Styles -->
         <link href="assets/css/ecaps.min.css" rel="stylesheet">
@@ -143,13 +144,18 @@
                                         <ul class="nav nav-tabs" role="tablist">
                                             <li role="presentation" class="active"><a href="#tab1" role="tab" data-toggle="tab">Info</a></li>
                                             <li role="presentation"><a href="#tab2" role="tab" data-toggle="tab">Meal</a></li>
-                                            <li role="presentation"><a href="#tab3" role="tab" data-toggle="tab">Flatulence</a></li>
-                                            <li role="presentation"><a href="#tab4" role="tab" data-toggle="tab">Faeces</a></li>
-                                            <li role="presentation"><a href="#tab5" role="tab" data-toggle="tab">Discomfort</a></li>
-                                            <li role="presentation"><a href="#tab6" role="tab" data-toggle="tab">Sleep</a></li>
-                                            <li role="presentation"><a href="#tab7" role="tab" data-toggle="tab">Mental State</a></li>
-                                            <li role="presentation"><a href="#tab8" role="tab" data-toggle="tab">Setting</a></li>
-                                            <li role="presentation"><a href="#tab9" role="tab" data-toggle="tab">Summary</a></li>
+                                            <li role="presentation"><a href="#tab3" role="tab" data-toggle="tab">Drink</a></li>
+                                            <li role="presentation"><a href="#tab4" role="tab" data-toggle="tab">Flatulence</a></li>
+                                            <li role="presentation"><a href="#tab5" role="tab" data-toggle="tab">Faeces</a></li>
+                                            <li role="presentation"><a href="#tab6" role="tab" data-toggle="tab">Discomfort</a></li>
+                                            <li role="presentation"><a href="#tab7" role="tab" data-toggle="tab">Sleep</a></li>
+                                            <li role="presentation"><a href="#tab8" role="tab" data-toggle="tab">Mental State</a></li>
+                                            <li role="presentation"><a href="#tab9" role="tab" data-toggle="tab">Reflux</a></li>
+                                            <li role="presentation"><a href="#tab10" role="tab" data-toggle="tab">Vomiting</a></li>
+                                            <li role="presentation"><a href="#tab11" role="tab" data-toggle="tab">Exercise</a></li>
+                                            <li role="presentation"><a href="#tab12" role="tab" data-toggle="tab">Weight</a></li>
+                                            <li role="presentation"><a href="#tab13" role="tab" data-toggle="tab">Setting</a></li>
+                                            <li role="presentation"><a href="#tab14" role="tab" data-toggle="tab">Summary</a></li>
                                             
                                             
                                         </ul>
@@ -261,45 +267,84 @@
                                                             <table class="table">
                                                                 <thead>
                                                                     <tr>
+                                                                        <th>Flag</th>
                                                                         <th>Date</th>
-                                                                        <th>Start Time</th>
-                                                                        <th>Duration</th>
-                                                                        <!--<th>Type</th>-->
-                                                                        <th>Food Items</th>
-                                                                        <th>Food Photos</th>
+                                                                        <th>Time</th>
+                                                                        <th>Food Inputs(from client)</th>
+                                                                        <th>Cooking method</th>
+                                                                        <th>Food Input(breakout)</th>
+                                                                        <th>Tags(breakout)</th>
+                                                                        <th>Portion size</th>
+                                                                        <th>Portion measurement unit</th>
+                                                                        <th>Cooking fats added(numerator)</th>
+                                                                        <th>Cooking fats added(denominator)</th>
+                                                                        <th>Location</th>
+                                                                        <th>Photograph</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
                                                                     <tr>
+                                                                        <td>(star)</td>
                                                                         <td>01/01/2022</td>
                                                                         <td>8:00</td>
-                                                                        <td>20min</td>
-                                                                        <!--<td>Breakfast</td>-->
-                                                                        <td>Apple, Milk, Bread</td>
+                                                                        <td>mexican</td>
+                                                                        <td> </td>
+                                                                        <td class="detail unclick" data-type = "1">beef mince,black beans,capsicum,…</td>
+                                                                        <td>Protein,fat,…</td>
+                                                                        <td>100</td>
+                                                                        <td>grams</td>
+                                                                        <td> </td>
+                                                                        <td> </td>
+                                                                        <td> </td>
                                                                         <td><i class="fa fa-file-image-o"></i></td>
                                                                     </tr>
+
+                                                                    <tr class="detail1 hide">
+                                                                        <td colspan="2" style="text-align: center;">more details</td>
+                                                                    </tr>
+
                                                                     <tr>
+                                                                        <td></td>
+                                                                        <td>01/01/2022</td>
+                                                                        <td>9:00</td>
+                                                                        <td>mexican</td>
+                                                                        <td> </td>
+                                                                        <td class="detail unclick" data-type = "1">beef mince,black beans,capsicum,…</td>
+                                                                        <td>Protein,fat,…</td>
+                                                                        <td> </td>
+                                                                        <td> </td>
+                                                                        <td> </td>
+                                                                        <td> </td>
+                                                                        <td> </td>
+                                                                        <td><i class="fa fa-file-image-o"></i></td>
+                                                                    </tr>
+                                                                    <tr><td></td>
                                                                         <td>01/01/2022</td>
                                                                         <td>18:00</td>
-                                                                        <td>40min</td>
-                                                                        <!--<td>Dinner</td>-->
-                                                                        <td>Chilken, Rice, Potato</td>
+                                                                        <td>mexican</td>
+                                                                        <th> </th>
+                                                                        <td class="detail unclick" data-type = "1">beef mince,black beans,capsicum,…</td>
+                                                                        <td>Protein,fat,…</td>
+                                                                        <td> </td>
+                                                                        <td> </td>
+                                                                        <td> </td>
+                                                                        <td> </td>
+                                                                        <td> </td>
                                                                         <td><i class="fa fa-file-image-o"></i></td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td>02/01/2022</td>
-                                                                        <td>8:00</td>
-                                                                        <td>20min</td>
-                                                                        <!--<td>Breakfast</td>-->
-                                                                        <td>Apple, Milk, Bread</td>
-                                                                        <td><i class="fa fa-file-image-o"></i></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>02/01/2022</td>
-                                                                        <td>18:00</td>
-                                                                        <td>40min</td>
-                                                                        <!--<td>Dinner</td>-->
-                                                                        <td>Chilken, Rice, Potato</td>
+                                                                        <td></td>
+                                                                        <td>01/01/2022</td>
+                                                                        <td>20:00</td>
+                                                                        <td>mexican</td>
+                                                                        <td> </td>
+                                                                        <td class="detail unclick" data-type = "1">beef mince,black beans,capsicum,…</td>
+                                                                        <td>Protein,fat,…</td>
+                                                                        <td> </td>
+                                                                        <td> </td>
+                                                                        <td> </td>
+                                                                        <td> </td>
+                                                                        <td> </td>
                                                                         <td><i class="fa fa-file-image-o"></i></td>
                                                                     </tr>
                                                                 </tbody>
@@ -308,8 +353,78 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- Tab Flatulence -->
+                                            <!-- Tab Drink -->
                                             <div role="tabpanel" class="tab-pane fade" id="tab3">
+                                                <div class="panel panel-white">
+                                                    <div class="panel-heading clearfix">
+                                                        <h4 class="panel-title">Drink</h4>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="table-responsive">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Flag</th>
+                                                                        <th>Date</th>
+                                                                        <th>Time</th>
+                                                                        <th>Drink inputs (from client)</th>
+                                                                        <th>Drink inputs (breakout)</th>
+                                                                        <th>tags (breakout)</th>
+                                                                        <th>Drink size (numerator)</th>
+                                                                        <th>Drink size (denominator)</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                    </tr>
+
+
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Tab Flatulence -->
+                                            <div role="tabpanel" class="tab-pane fade" id="tab4">
                                                 <div class="panel panel-white">
                                                     <div class="panel-heading clearfix">
                                                         <h4 class="panel-title">Flatulence</h4>
@@ -319,36 +434,41 @@
                                                             <table class="table">
                                                                 <thead>
                                                                     <tr>
+                                                                        <th>Flag</th>
                                                                         <th>Date</th>
                                                                         <th>Time</th>
-                                                                        <th>Frequency</th>
                                                                         <th>Degree</th>
+                                                                        <th>Comment(per day)</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
                                                                     <tr>
+                                                                        <td></td>
                                                                         <td>01/01/2022</td>
                                                                         <td>8:00</td>
-                                                                        <td>per hour</td>
                                                                         <td>normal</td>
+                                                                        <td></td>
                                                                     </tr>
                                                                     <tr>
+                                                                        <td></td>
                                                                         <td>01/01/2022</td>
                                                                         <td>18:00</td>
-                                                                        <td>per hour</td>
                                                                         <td>high</td>
+                                                                        <td></td>
                                                                     </tr>
                                                                     <tr>
+                                                                        <td></td>
                                                                         <td>02/01/2022</td>
                                                                         <td>8:00</td>
-                                                                        <td>per hour</td>
                                                                         <td>normal</td>
+                                                                        <td></td>
                                                                     </tr>
                                                                     <tr>
+                                                                        <td></td>
                                                                         <td>02/01/2022</td>
                                                                         <td>18:00</td>
-                                                                        <td>per hour</td>
                                                                         <td>high</td>
+                                                                        <td></td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
@@ -357,7 +477,7 @@
                                                 </div>
                                             </div>
                                             <!-- Tab Faeces -->
-                                            <div role="tabpanel" class="tab-pane fade" id="tab4">
+                                            <div role="tabpanel" class="tab-pane fade" id="tab5">
                                                 <div class="panel panel-white">
                                                     <div class="panel-heading clearfix">
                                                         <h4 class="panel-title">Faeces</h4>
@@ -367,6 +487,7 @@
                                                             <table class="table">
                                                                 <thead>
                                                                     <tr>
+                                                                        <th>Flag</th>
                                                                         <th>Date</th>
                                                                         <th>Time</th>
                                                                         <th>State</th>
@@ -374,21 +495,25 @@
                                                                 </thead>
                                                                 <tbody>
                                                                     <tr>
+                                                                        <td></td>
                                                                         <td>01/01/2022</td>
                                                                         <td>8:00</td>
                                                                         <td>type 5</td>
                                                                     </tr>
                                                                     <tr>
+                                                                        <td></td>
                                                                         <td>01/01/2022</td>
                                                                         <td>18:00</td>
                                                                         <td>type 5</td>
                                                                     </tr>
                                                                     <tr>
+                                                                        <td></td>
                                                                         <td>02/01/2022</td>
                                                                         <td>8:00</td>
                                                                         <td>type 7</td>
                                                                     </tr>
                                                                     <tr>
+                                                                        <td></td>
                                                                         <td>02/01/2022</td>
                                                                         <td>18:00</td>
                                                                         <td>type 7</td>
@@ -400,7 +525,7 @@
                                                 </div>
                                             </div>
                                             <!-- Tab Discomfort -->
-                                            <div role="tabpanel" class="tab-pane fade" id="tab5">
+                                            <div role="tabpanel" class="tab-pane fade" id="tab6">
                                                 <div class="panel panel-white">
                                                     <div class="panel-heading clearfix">
                                                         <h4 class="panel-title">Discomfort</h4>
@@ -410,42 +535,32 @@
                                                             <table class="table">
                                                                 <thead>
                                                                     <tr>
+                                                                        <th>Flag</th>
                                                                         <th>Date</th>
                                                                         <th>Time</th>
-                                                                        <th>Frequency</th>
-                                                                        <th>Degree</th>
-                                                                        <th>Description</th>
+                                                                        <th>Discomfort (incidental)</th>
+                                                                        <th>Discomfort (daily)</th>
+                                                                        <th>Discomfort descriptor</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
                                                                     <tr>
+                                                                        <td></td>
                                                                         <td>01/01/2022</td>
                                                                         <td>8:00</td>
-                                                                        <td>per hour</td>
-                                                                        <td>normal</td>
+                                                                        <td>4</td>
                                                                         <td>stomachache</td>
+                                                                        <td></td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td>01/01/2022</td>
-                                                                        <td>18:00</td>
-                                                                        <td>per hour</td>
-                                                                        <td>high</td>
-                                                                        <td>headache</td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>02/01/2022</td>
+                                                                        <td></td>
+                                                                        <td>01/05/2022</td>
                                                                         <td>8:00</td>
-                                                                        <td>per hour</td>
-                                                                        <td>normal</td>
+                                                                        <td>7</td>
                                                                         <td>stomachache</td>
+                                                                        <td></td>
                                                                     </tr>
-                                                                    <tr>
-                                                                        <td>02/01/2022</td>
-                                                                        <td>18:00</td>
-                                                                        <td>per hour</td>
-                                                                        <td>high</td>
-                                                                        <td>headache</td>
-                                                                    </tr>
+
                                                                 </tbody>
                                                             </table>
                                                         </div>
@@ -453,7 +568,7 @@
                                                 </div>
                                             </div>
                                             <!-- Tab Sleep -->
-                                            <div role="tabpanel" class="tab-pane fade" id="tab6">
+                                            <div role="tabpanel" class="tab-pane fade" id="tab7">
                                                 <div class="panel panel-white">
                                                     <div class="panel-heading clearfix">
                                                         <h4 class="panel-title">Sleep</h4>
@@ -463,37 +578,40 @@
                                                             <table class="table">
                                                                 <thead>
                                                                     <tr>
+                                                                        <th>Flag</th>
                                                                         <th>Date</th>
                                                                         <th>Start Time</th>
                                                                         <th>Quantity</th>
                                                                         <th>Quality</th>
+                                                                        <th>Sleep note</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
                                                                     <tr>
+                                                                        <td></td>
                                                                         <td>01/01/2022</td>
                                                                         <td>22:00</td>
                                                                         <td>8h</td>
                                                                         <td>good</td>
+                                                                        <td>wake up twice</td>
                                                                     </tr>
                                                                     <tr>
+                                                                        <td></td>
                                                                         <td>01/01/2022</td>
                                                                         <td>23:00</td>
                                                                         <td>7h</td>
                                                                         <td>awful</td>
+                                                                        <td>bad dreams</td>
                                                                     </tr>
                                                                     <tr>
+                                                                        <td></td>
                                                                         <td>02/01/2022</td>
                                                                         <td>22:00</td>
                                                                         <td>8h</td>
                                                                         <td>normal</td>
+                                                                        <td></td>
                                                                     </tr>
-                                                                    <tr>
-                                                                        <td>02/01/2022</td>
-                                                                        <td>23:00</td>
-                                                                        <td>7h</td>
-                                                                        <td>awful</td>
-                                                                    </tr>
+
                                                                 </tbody>
                                                             </table>
                                                         </div>
@@ -501,7 +619,7 @@
                                                 </div>
                                             </div>
                                             <!-- Tab Mental State -->
-                                            <div role="tabpanel" class="tab-pane fade" id="tab7">
+                                            <div role="tabpanel" class="tab-pane fade" id="tab8">
                                                 <div class="panel panel-white">
                                                     <div class="panel-heading clearfix">
                                                         <h4 class="panel-title">Mental State</h4>
@@ -548,8 +666,167 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <!-- Tab Reflux -->
+                                            <div role="tabpanel" class="tab-pane fade" id="tab9">
+                                                <div class="panel panel-white">
+                                                    <div class="panel-heading clearfix">
+                                                        <h4 class="panel-title">Reflux</h4>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="table-responsive">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Flag</th>
+                                                                        <th>Date</th>
+                                                                        <th>Time</th>
+                                                                        <th>Reflux (incidental)</th>
+                                                                        <th>Reflux (daily)</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td>01/01/2022</td>
+                                                                        <td>19:00</td>
+                                                                        <td>1</td>
+                                                                        <td>reflux and heartburn</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td>02/01/2022</td>
+                                                                        <td>20:00</td>
+                                                                        <td>1</td>
+                                                                        <td>a little heartburn</td>
+                                                                    </tr>
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Tab Vomiting -->
+                                            <div role="tabpanel" class="tab-pane fade" id="tab10">
+                                                <div class="panel panel-white">
+                                                    <div class="panel-heading clearfix">
+                                                        <h4 class="panel-title">Vomiting</h4>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="table-responsive">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Flag</th>
+                                                                        <th>Date</th>
+                                                                        <th>Vomiting (incidental)</th>
+                                                                        <th>Vomiting (daily)</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td>01/01/2022</td>
+                                                                        <td>12:00,13:00,14:00</td>
+                                                                        <td>3</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td>02/01/2022</td>
+                                                                        <td>23:00</td>
+                                                                        <td>1</td>
+                                                                    </tr>
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Tab Exercise -->
+                                            <div role="tabpanel" class="tab-pane fade" id="tab11">
+                                                <div class="panel panel-white">
+                                                    <div class="panel-heading clearfix">
+                                                        <h4 class="panel-title">Exercise</h4>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="table-responsive">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Flag</th>
+                                                                        <th>Date</th>
+                                                                        <th>Exercise (duration)</th>
+                                                                        <th>Exercise (type)</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td>01/01/2022</td>
+                                                                        <td>3h</td>
+                                                                        <td>swim</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td>01/01/2022</td>
+                                                                        <td>2h</td>
+                                                                        <td>boxing</td>
+
+                                                                    </tr>
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Tab Weight -->
+                                            <div role="tabpanel" class="tab-pane fade" id="tab12">
+                                                <div class="panel panel-white">
+                                                    <div class="panel-heading clearfix">
+                                                        <h4 class="panel-title">Weight</h4>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="table-responsive">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Flag</th>
+                                                                        <th>Date</th>
+                                                                        <th>Time</th>
+                                                                        <th>Weight(kg)</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td>01/01/2022</td>
+                                                                        <td>22:00</td>
+                                                                        <td>55</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td>08/01/2022</td>
+                                                                        <td>23:00</td>
+                                                                        <td>53</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td>015/01/2022</td>
+                                                                        <td>22:00</td>
+                                                                        <td>54</td>
+                                                                    </tr>
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                             <!-- Tab Setting -->
-                                            <div role="tabpanel" class="tab-pane fade" id="tab8">
+                                            <div role="tabpanel" class="tab-pane fade" id="tab13">
                                                 <div class="panel panel-white">
                                                     <div class="panel-heading clearfix">
                                                         <h4 class="panel-title">Setting</h4>
@@ -627,7 +904,7 @@
                                                 </div>
                                             </div>
                                             <!-- Tab Summary -->
-                                            <div role="tabpanel" class="tab-pane fade" id="tab9">
+                                            <div role="tabpanel" class="tab-pane fade" id="tab14">
                                                 <div class="panel-body" style="height: 65vh; overflow:scroll">
                                                     <h4>Generate Report</h4>   
                                                     <div style="float: right; margin-bottom: 10px">
@@ -758,6 +1035,8 @@
         <script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
         <script src="assets/js/ecaps.min.js"></script>
         <script src="assets/js/pages/table-data.js"></script>
+        <script type="text/javascript" src="assets/js/details.js"></script>
+
 
     </body>
 </html>
